@@ -71,7 +71,6 @@ Finish the game with the highest number of discs in your color.
 - **RandomAI** – Chooses a random legal move.
 - **GreedyAI** – Chooses the move that flips the most opponent discs.  
   Tie-breaking: rightmost position, then bottommost.
-- **Bonus AI** *(optional)* – Advanced strategy with lookahead.
 
 ---
 
