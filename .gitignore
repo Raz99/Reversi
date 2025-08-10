@@ -1,20 +1,13 @@
-# IntelliJ
+# IntelliJ project files
 .idea/
 *.iml
 
-# Build output
+# Build outputs
 out/
 build/
 target/
 *.class
 
-# JAR/WAR artifacts
-*.jar
-*.war
-
-# Logs
-*.log
-
-# OS files
+# OS-generated files
 .DS_Store
 Thumbs.db
