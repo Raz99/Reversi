@@ -1,7 +1,19 @@
 # Reversi
 
-An extended version of the classic **Reversi (Othello)** board game, implemented in Java with a graphical user interface (GUI), special disc types, and AI opponents.  
-This project was developed as part of a university Object-Oriented Programming course.
+An extended version of the classic **Reversi (Othello)** board game, implemented in **Java** with a graphical user interface (GUI), special disc types and AI opponents.  
+Originally developed as part of an **Object-Oriented Programming** university project.
+
+---
+
+## Quick Start
+
+[📥 Download the JAR file](https://github.com/Raz99/Reversi/releases/download/V1.0.0/Reversi.jar)
+
+Simply download and run the JAR to start playing!
+
+```bash
+java -jar Reversi.jar
+```
 
 ---
 
@@ -10,7 +22,7 @@ This project was developed as part of a university Object-Oriented Programming c
 Reversi is a strategy board game played on an 8×8 grid.  
 The goal is to finish the game with the majority of discs in your color.
 
-This **extended version** introduces:
+This version introduces:
 - **Special disc types** with unique behaviors.
 - **AI players** with different strategies.
 - **Undo** and **Reset** functionality.
@@ -42,7 +54,7 @@ Finish the game with the highest number of discs in your color.
 3. **💣 Bomb Disc**
     - When flipped, all adjacent discs (including diagonals) are flipped.
     - May trigger chain reactions with other bomb discs.
-    - Cannot flip an **UnflippableDisc**.
+    - Cannot flip an **Unflippable Disc**.
 
 ---
 
@@ -87,91 +99,22 @@ The game uses a provided **ReversiGUI** framework:
 
 ```
 src/
-  game/
-    GameLogic.java         # Core game logic and rules
-    SimpleDisc.java        # Standard disc behavior
-    UnflippableDisc.java   # Unflippable disc behavior
-    BombDisc.java          # Bomb disc behavior
-    Position.java          # Represents a board position
-    Move.java              # Represents a move (used for Undo)
-    RandomAI.java          # Random AI implementation
-    GreedyAI.java          # Greedy AI implementation
-
-lib/
-  provided/
-    Main.java              # Entry point
-    ReversiGUI.java
-    PlayableLogic.java
-    Player.java
-    AIPlayer.java
-    Disc.java
-
-assets/
-  (Optional images/icons)
-
-docs/
-  Reversi_Spec.pdf         # Original assignment specification
+  AIPlayer.java
+  BombDisc.java
+  Disc.java
+  GameLogic.java
+  GreedyAI.java
+  HumanPlayer.java
+  Main.java
+  Move.java
+  PlayableLogic.java
+  Player.java
+  Position.java
+  RandomAI.java
+  ReversiGUI.java
+  SimpleDisc.java
+  UnflippableDisc.java
 ```
-
----
-
-## Running the Game
-
-### Using IntelliJ IDEA
-1. Open the project in IntelliJ.
-2. Mark `src` and `lib` as **Source Folders**.
-3. Run `provided.Main`.
-
-### From Command Line
-```bash
-javac -d bin src/game/*.java lib/provided/*.java
-java -cp bin provided.Main
-```
-
----
-
-## Creating a Runnable JAR
-
-### IntelliJ (recommended)
-1. `File → Project Structure → Artifacts`
-2. `+ → JAR → From modules with dependencies`
-3. Select `provided.Main` as Main Class.
-4. Set output directory to `dist/`.
-5. `Build → Build Artifacts → Build`.
-
-### Command Line
-```bash
-javac -d bin src/game/*.java lib/provided/*.java
-echo Main-Class: provided.Main > manifest.txt
-jar cfm dist/ReversiExtended.jar manifest.txt -C bin .
-java -jar dist/ReversiExtended.jar
-```
-
----
-
-## Example Console Output
-
-```
-Player 1 placed a ⬤ in (2, 4)
-Player 1 flipped the ⬤ in (3, 4)
-
-Player 2 placed a 💣 in (5, 5)
-Player 2 flipped the ⬤ in (4, 5)
-```
-
----
-
-## Winning Announcement
-
-At the end of the game:
-```
-Player 1 wins with 43 discs! Player 2 had 21 discs.
-```
-Or:
-```
-It's a tie! Both players have 32 discs.
-```
-
 ---
 
 ## License
