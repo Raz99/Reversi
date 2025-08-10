@@ -23,7 +23,7 @@ public class Main {
             PlayableLogic gameLogic = new GameLogic();
 
             // Create and show the game GUI
-            GUI_for_chess_like_games gui = new GUI_for_chess_like_games(gameLogic, "Reversi Game");
+            ReversiGUI gui = new ReversiGUI(gameLogic, "Reversi Game");
             gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             gui.pack();
             gui.setLocationRelativeTo(null); // Center on screen

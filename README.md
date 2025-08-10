@@ -76,7 +76,7 @@ Finish the game with the highest number of discs in your color.
 
 ## GUI
 
-The game uses a provided **GUI_for_chess_like_games** framework:
+The game uses a provided **ReversiGUI** framework:
 - Displays the board and discs.
 - Allows placing discs by clicking on squares.
 - Shows messages for moves, flips, undos, and the winner.
@@ -100,7 +100,7 @@ src/
 lib/
   provided/
     Main.java              # Entry point
-    GUI_for_chess_like_games.java
+    ReversiGUI.java
     PlayableLogic.java
     Player.java
     AIPlayer.java
