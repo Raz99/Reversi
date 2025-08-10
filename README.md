@@ -22,7 +22,9 @@ java -jar Reversi.jar
 Reversi is a strategy board game played on an 8×8 grid.  
 The goal is to finish the game with the majority of discs in your color.
 
-![Reversi GUI Screenshot](assets/game_screenshot.png)
+<p align="center">
+  <img src="assets/game_screenshot.png" alt="Reversi GUI" width="500"/>
+</p>
 
 This version introduces:
 - **Special disc types** with unique behaviors.
